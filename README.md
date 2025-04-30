@@ -1,2 +1,2 @@
-# Pe-a-Certa
+# Peça-Certa
 Site do curso de Ferramentas Web
