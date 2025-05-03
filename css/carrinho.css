@@ -60,6 +60,11 @@
 
   .rodape{
     background-color: #0a4c91;
-    margin: 100% 0px -20px 0px;
-    justify-content: flex;
+    background-size: auto;
+    margin: 100% 0px 0% 0px;
+  }
+
+  #todos{
+    text-align: center;
+    margin-bottom: -5px;
   }
