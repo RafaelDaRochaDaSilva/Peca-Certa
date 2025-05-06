@@ -1,9 +1,10 @@
 
 
 body {
-    margin: 0;
+    margin: 0px;
     font-family: 'Inter', sans-serif;
     background-color: #d4d4d4;
+    
   }
   
   .home {
@@ -111,5 +112,11 @@ body {
    .menu4::-webkit-scrollbar {
     display: none;
   }
-
+  
+  .redes img{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    
+  }
   
