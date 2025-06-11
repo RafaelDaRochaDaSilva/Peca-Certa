@@ -72,26 +72,26 @@ body {
   }
 
 .categorias{
-    margin: 20px 32px -22px; 
+    margin: 20px 32px 5px; 
 }
 
   .menu3{
-    background: #0a4c91;
-    border-radius: 20px;
+    background: #ffffff;
+    border-radius: 0px;
     display: flex;
     justify-content: center; 
     align-items: center;    
-    height: 35vh;           
-    margin: 30px;
-    gap: 90px;
+    height: 26vh;           
+    margin: 0px;
+    gap: 120px; 
     overflow-x: auto ;
     white-space:nowrap;
   }
    
    .menu3 img{
-      width: 300px;
-      height: 220px;
-      border-radius: 10%;
+      width: 280px;
+      height: 210px;
+      border-radius: 0%;
       object-fit: cover;
       display: inline-block;
       
@@ -101,16 +101,6 @@ body {
   }
 
    
-   .menu4 img{
-      width: 220px;
-      height: 220px;
-      border-radius: 10%;
-      object-fit: cover;
-      display: inline-block;
-      
-   }
-   .menu4::-webkit-scrollbar {
-    display: none;
-  }
+   
   
   
