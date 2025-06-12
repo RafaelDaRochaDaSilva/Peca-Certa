@@ -57,6 +57,7 @@ body {
     border-radius: 8px;
     width: 160px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 999;
   }
   
   .menu-dropdown a {
@@ -92,12 +93,12 @@ body {
   flex-wrap: nowrap;
   justify-content: center; 
   align-items: flex-end;    
-  height: 35vh;           
-  margin: 0px;
-  gap: 120px; 
+  height: 45vh;           
+  margin: 0px 62px 20px;
+  gap: 150px; 
   overflow-x: auto;
   white-space: nowrap;
-  padding-top: 60px;
+  padding-top: 60px; 
   z-index: 1; 
   width: 100%; 
 }
@@ -119,8 +120,8 @@ body {
 }
 
 .menu3 img{
-    width: 260px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     border-radius: 0%;
     object-fit: cover;
     display: inline-block;
@@ -128,7 +129,37 @@ body {
    .menu3::-webkit-scrollbar {
     display: none;
   }
+  
+  .scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
 
+.scroll-btn:hover {
+  background-color: #ffffff00
+}
+
+.scroll-btn.left {
+  left: 20px;
+  background-color: #ffffff00;
+  color: #011c37;
+}
+
+.scroll-btn.right {
+  right: 20px;
+   background-color: #ffffff00;
+   color: #011c37;
+}
    
    
   
