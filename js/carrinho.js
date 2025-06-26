@@ -1,28 +1,54 @@
 let total = 0;
-let count = 1;
+let itemId = 0;
+
+
+const produtos = [
+  {
+    nome: "Pneu 16''",
+    preco: 320.00,
+    imagem:"/imgs/Corsa-Sedan-20021 (1).png"
+  },
+  {
+    nome: "Filtro de Óleo",
+    preco: 25.00,
+    imagem: "/imgs/ford-ka-20101.png"
+  },
+  {
+    nome: "Pastilha de Freio",
+    preco: 75.50,
+    imagem: "/imgs/honda-city1.png"
+  }
+];
 
 function addItem() {
-  const cart = document.getElementById('cart-items');
-  const item = document.createElement('div');
-  item.className = 'cart-item';
+  const produto = produtos[itemId % produtos.length];
+  const cartItems = document.getElementById("cart-items");
 
-  const price = (Math.random() * 100 + 10).toFixed(2); // Preço aleatório
+  const itemDiv = document.createElement("div");
+  itemDiv.className = "produto";
 
-  item.innerHTML = `
-    <p>Produto ${count}</p>
-    <p>R$ ${price}</p>
-    <button class="remove-btn">Remover</button>
+  itemDiv.innerHTML = `
+    <img src="${produto.imagem}" alt="${produto.nome}" class="imagem-produto">
+    <div class="info-produto">
+      <h3>${produto.nome}</h3>
+      <p>R$ ${produto.preco.toFixed(2)}</p>
+      <button onclick="removerItem(this, ${produto.preco})">Remover</button>
+    </div>
   `;
 
-  // Adiciona evento ao botão "Remover"
-  item.querySelector('.remove-btn').addEventListener('click', function () {
-    cart.removeChild(item);
-    total -= parseFloat(price);
-    document.getElementById('total').textContent = total.toFixed(2);
-  });
+  cartItems.appendChild(itemDiv);
+  total += produto.preco;
+  itemId++;
 
-  cart.appendChild(item);
-  total += parseFloat(price);
-  document.getElementById('total').textContent = total.toFixed(2);
-  count++;
+  atualizarTotal();
+}
+
+function removerItem(botao, preco) {
+  botao.closest(".produto").remove();
+  total -= preco;
+  atualizarTotal();
+}
+
+function atualizarTotal() {
+  document.getElementById("total").innerText = total.toFixed(2);
 }
