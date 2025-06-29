@@ -4,9 +4,7 @@ class HeaderComponent extends HTMLElement {
         this.attachShadow({ mode: 'opne' });
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./componentes/header/header.css">
-        <div class=".home" style="display: flex;
-                                  flex-direction: column;
-                                  height: 100vh;">
+        <div class=".home">
         <div class="menu">
           <div class="menu2">
             <img class="logo" src="/imgs/logo2.png" />
