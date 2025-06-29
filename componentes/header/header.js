@@ -1,9 +1,10 @@
 class HeaderComponent extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'opne' });
+        const shadow = this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="./componentes/header/header.css">
+     <header>
         <div class=".home">
         <div class="menu">
           <div class="menu2">
@@ -28,13 +29,24 @@ class HeaderComponent extends HTMLElement {
                         <a href="../../index.html">👤 Login</a>
                       </div>
                     </div>
-                <script src="../js/script.js"></script>
+                <script src="./js/script.js"></script>
               </div>
             </div>
           </div>
         </div>
-        `
+        </div>
+      </header>
+        `;
     }
+  /*
+    connectedCallback() {
+    const menuIcon = this.shadowRoot.querySelector('.menu-icon');
+    const links = this.shadowRoot.querySelector('.links');
+    menuIcon.addEventListener('click', () => {
+      links.classList.toggle('active');
+    });
+  }*/
+
 }
 
 customElements.define('header-component', HeaderComponent);
