@@ -14,7 +14,7 @@ class HeaderComponent extends HTMLElement {
         super();
         const shadow = this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="/componentes/header/header.css">
+    <link rel="stylesheet" href="/componentes/header-home/header.css">
       <header>
           <div class=".home">
           <div class="menu">
@@ -36,6 +36,7 @@ class HeaderComponent extends HTMLElement {
                       <div class="menu-container">
                         <button class="menu-button" >☰ Menu</button>
                         <div id="menu" class="menu-dropdown">
+                          <a href="/pages/home.html">🔙 Home</a>
                           <a href="/pages/carrinho.html">🛒 Carrinho</a>
                           <a href="../../index.html">👤 Login</a>
                         </div>

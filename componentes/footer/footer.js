@@ -3,7 +3,6 @@ class FooterComponent extends HTMLElement  {
     super();
     const shadow = this.attachShadow({ mode : 'open' });
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="./componentes/footer/footer.css">
          <footer style="background-color: #0a4c91; color: white; position: fixed; bottom: 0%; padding: 10px 0;width: 100%;">
           <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
             
