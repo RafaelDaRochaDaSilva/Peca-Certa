@@ -84,13 +84,14 @@ body {
 .image-section {
   background: linear-gradient(to bottom, #1a2740, #1f3150);
   text-align: center;
-  padding: 15px;
-  height: 200px;
+  padding: 10px;
+  height: 250px;
 }
 
 .car-img, .peca-img {
   width: 70%;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .info-section {

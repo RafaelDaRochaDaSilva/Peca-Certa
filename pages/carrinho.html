@@ -7,10 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="website icon" type="png" href="/imgs/logo2.png" >
         <link rel="stylesheet" href="/css/carrinho.css">
+         <script src="/componentes/header-geral/head-geral.js" type="module" defer></script>
         <script src="/js/carrinho.js" type="module" defer></script>
         <script src="/componentes/footer/footer.js" defer></script>
         <title>Peça Certa - Carrinho</title>
-    </head>
+        </head>
 
         <body style="background-color: #d4d4d4; margin: 0;
             font-family: 'Inter', sans-serif;">
@@ -26,9 +27,8 @@
       
            </div>
 
-             <p class="total">Total: R$ <span id="total">0.00</span></p>
-            <button onclick="addItem()">Adicionar Produto</button>
-            </div>
+             <div id="cart-items"></div>
+             <p>Total: R$ <span id="total">0.00</span></p>
 
             <script src="/js/carrinho.js"></script>
 
@@ -37,4 +37,4 @@
     
         </body>
 
-</html>
+        </html>
